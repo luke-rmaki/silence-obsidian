@@ -1,0 +1,26 @@
+.side-dock-ribbon {
+  background-color: var(--ribbon-background) !important;
+  /* Ribbon buttons */
+  & .side-dock-ribbon-action {
+    color: var(--icon-normal);
+
+    &:hover,
+    &:focus {
+      color: var(--icon-hover);
+    }
+  }
+  /* Arrow */
+  & .workspace-ribbon-collapse-btn {
+    color: var(--icon-accent);
+  }
+
+  &.mod-left.is-collapsed,
+  &.mod-right.is-collapsed {
+    /* border-right: var(--border); */
+    border: none;
+  }
+
+  /* &.mod-right.is-collapsed {
+    border-left: var(--border);
+  } */
+}

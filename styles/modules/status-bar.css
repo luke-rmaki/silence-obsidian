@@ -1,0 +1,12 @@
+.status-bar {
+  border-top: none;
+  background-color: var(--ribbon-background);
+
+  & .status-bar-item {
+    color: var(--cerulean-2);
+
+    &.mod-clickable:hover {
+      color: var(--cerulean-5);
+    }
+  }
+}

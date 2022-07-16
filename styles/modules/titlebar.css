@@ -1,0 +1,13 @@
+.titlebar {
+  background-color: var(--ribbon-background);
+  /* border-bottom: var(--border); */
+  border: none;
+
+  & .titlebar-text {
+    color: var(--cerulean-3);
+  }
+
+  & .titlebar-button {
+    color: var(--serenity-0);
+  }
+}
