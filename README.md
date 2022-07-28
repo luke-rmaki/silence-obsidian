@@ -12,7 +12,7 @@ Twitter: [luke-rmaki](https://twitter.com/luke_rmaki)
 <br />
 
 
-![screenshot of the theme](Screenshot%20from%202022-07-28%2017-10-30.png)
+![screenshot of the theme](Screenshot.png)
 
 ---
 <br />
