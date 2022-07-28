@@ -1,0 +1,47 @@
+.workspace-drawer-inner {
+  background-color: var(--sidebar-background);
+
+  /*  Vault name */
+  & .workspace-drawer-header-name > span {
+    color: var(--sidebar-header);
+  }
+
+  /* Folder and file number */
+  & .workspace-drawer-header-info div {
+    color: var(--sidebar-info);
+  }
+
+  /* pin */
+  & .workspace-drawer-header-icon path {
+    color: var(--pin);
+  }
+
+  /* Back arrow */
+  & .workspace-drawer-active-tab-back-icon path {
+    color: var(--back-icon);
+  }
+
+  /*  Icon for whichever module is open */
+  & .workspace-drawer-active-tab-icon svg:not(.fullscreen) path {
+    color: var(--drawer-icon-active);
+  }
+  /*  Name of current module */
+  & .workspace-drawer-active-tab-title {
+    color: var(--drawer-title);
+  }
+
+  & .workspace-drawer-active-tab-icon svg.fullscreen path {
+    color: var(--fullscreen-icon);
+  }
+
+  & .workspace-drawer-tab-options {
+    & .workspace-drawer-tab-option-item {
+      & div {
+        color: var(--text);
+      }
+      & path {
+        color: var(--drawer-icon-active);
+      }
+    }
+  }
+}

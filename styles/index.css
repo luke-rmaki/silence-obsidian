@@ -8,39 +8,26 @@
 ╚═════╝░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝░╚════╝░╚══════╝░░░░░░░╚════╝░╚═════╝░╚═════╝░╚═╝╚═════╝░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
 
 Made by: Luke Ruokaismaki
-Version: 0.1.0
+Version: 1.0.0
 Repo: https://github.com/luke-rmaki/silence-obsidian
 Built with PostCSS and Gulp
+
+To edit colors, use the vars.css file or edit the variables below if not building from source
+
 
 
 */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
-@import "./modules/vars.css";
+@import "./colors.css";
+@import "./vars.css";
 @import "./modules/titlebar.css";
 @import "./modules//sidebars/sidebars.css";
 @import "./modules/ribbons.css";
-/* @import "./modules/left-side-bar.css"; */
 @import "./modules/main-body.css";
-@import "./modules/text-styles.css";
-@import "./modules/preview.css";
-/* @import "./modules/right-side-bar.css"; */
+@import "./modules/text.css";
 @import "./modules/status-bar.css";
+@import "./modules/menu.css";
 
 body {
   font-family: var(--font) !important;
-}
-
-.tooltip {
-  background: var(--gray-12);
-  color: var(--serenity-0);
-}
-
-.workspace-leaf-resize-handle {
-  background-color: var(--gray-10);
-  width: 2px;
-
-  &:hover,
-  &:focus {
-    background-color: var(--green-1);
-  }
 }

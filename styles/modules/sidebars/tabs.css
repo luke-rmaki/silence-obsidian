@@ -19,16 +19,16 @@
     }
     &:hover,
     &:focus {
-      color: var(--cerulean-5);
+      color: var(--icon-hover);
     }
   }
   /* Active tab */
   & .is-active {
-    background-color: var(--ribbon-background) !important;
+    background-color: var(--sidebar-background) !important;
     color: var(--icon-hover);
 
     & .workspace-tab-header-inner {
-      background-color: var(--ribbon-background) !important;
+      background-color: var(--sidebar-background) !important;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
     }

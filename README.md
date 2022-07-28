@@ -1,46 +1,53 @@
 # SILENCE
 
-> Dark theme for [Obsidian](https://obsidian.md/)
+> Dark theme for [Obsidian](https://obsidian.md/) desktop and mobile
 
-Tested with Obsidian Desktop v.0.13.0 and Obsidian Mobile (Android) v.1.0.5
 
 Uses [Fira Code](https://fonts.google.com/specimen/Fira+Code).
 
-This theme is a work in progress. Please feel free to raise an issue for any bugs or suggestions.
+Please feel free to raise an issue for any bugs or suggestions.
 
 Twitter: [luke-rmaki](https://twitter.com/luke_rmaki)
 
 <br />
 
+
+![screenshot of the theme](Screenshot%20from%202022-07-28%2017-10-30.png)
+
 ---
+<br />
+
+
+This can also serve a base to make your own theme as everything is styled via css variables in the vars.css file, so feel free to fork it and make it your own (just rename it 😀).
+
+<br />
+
+
+
+
+---
+<br />
 
 ## To Do
+- [ ] Add to community themes
 
-- [x] Search result hover colors
-- [x] Tag pane nested hover style bug
-- [x] Linked mention nested hover
-- [x] Fix live preview styling
-- [ ] Linked mention icon active
-- [x] Outline hover
-- [x] Editor popups
-- [ ] Graph view
-- [x] Mobile active folder style
+
 
 ## How to install
-### Option 1 (Add from Obsidian)
+<!-- ### Option 1 (Add from Obsidian)
 - This theme is now listed in Obsidian's community themes
 - Open Obsidian -> Settings -> Appearance 
-- Browser Community themes and search for Rmaki
+- Browser Community themes and search for Rmaki -->
 
 
-### Option 2 (Download):
+### Option 1 (Download):
 
 1. Download the `Silence-Obsidian.css` file
 2. Copy into your themes folder
 3. Open Settings -> Appearances
-4. Change Theme to 'Rmaki-Obsidian'
+4. Change Theme to 'Silence-Obsidian'
 
-### Option 3 (Build):
+### Option 2 (Build):
 
 1. Clone the repo
 2. Navigate to folder
@@ -67,4 +74,9 @@ or
 
 ```bash
 npm run build
+```
+or
+
+```bash
+pnpm run build
 ```

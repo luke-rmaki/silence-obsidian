@@ -1,5 +1,4 @@
 :root {
-  /* ---------------------------------------- Colors */
   --gray-0: #c2cadc;
   --gray-1: #b0bbd2;
   --gray-2: #9dabc8;
@@ -91,24 +90,4 @@
   --cerulean-10: #00214b;
   --cerulean-11: #00183a;
   --cerulean-12: #00112d;
-
-  --border: 0.5px solid var(--cerulean-5);
-  --editor-background: var(--gray-10);
-  --icon-normal: var(--serenity-3);
-  --icon-hover: var(--cerulean-5);
-  --icon-accent: var(--cerulean-5);
-  --text: var(--serenity-0);
-  --text-mute: var(--gray-0);
-  --popup-dark: var(--gray-10);
-  --ribbon-background: var(--gray-11);
-  --sidebar-background: var(--gray-10);
-  --scrollbar-bg: var(--cerulean-5);
-
-  /* --------------------------------------------- Font */
-  --font: "Fira Code", monospace;
-
-  /* font sizes */
-  --par: 0.9rem;
-  --heading: 1.1rem;
-  --small: 0.7rem;
 }

@@ -8,6 +8,15 @@
     &:focus {
       color: var(--icon-hover);
     }
+
+    &[aria-label="Settings"] {
+      color: var(--settings-icon);
+
+      &:hover,
+      &:focus {
+        color: var(--settings-icon-hover);
+      }
+    }
   }
   /* Arrow */
   & .workspace-ribbon-collapse-btn {
@@ -19,8 +28,4 @@
     /* border-right: var(--border); */
     border: none;
   }
-
-  /* &.mod-right.is-collapsed {
-    border-left: var(--border);
-  } */
 }

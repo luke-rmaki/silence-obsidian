@@ -1,0 +1,105 @@
+/* Settings */
+.modal-container .mod-settings {
+  background-color: var(--settings-content-bg);
+
+  & .vertical-tab-header,
+  & .vertical-tab-header-group-item,
+  & .vertical-tab-nav-item {
+    background-color: var(--settings-menu-bg);
+    color: var(--settings-menu-color);
+  }
+
+  & .vertical-tab-header-group-title {
+    color: var(--settings-menu-title);
+  }
+
+  & .vertical-tab-nav-item.is-active {
+    border-left-color: var(--settings-menu-active-border);
+    color: var(--settings-menu-active-color);
+  }
+
+  & .vertical-tab-content {
+    background-color: var(--settings-content-bg);
+
+    & .setting-item {
+      border-top: var(--settings-content-border);
+
+      & .setting-item-info {
+        & .setting-item-name {
+          color: var(--settings-content-name);
+        }
+        & .setting-item-description {
+          color: var(--settings-content-description);
+        }
+      }
+      &.setting-item-heading {
+        border-top: none;
+
+        & .setting-item-name {
+          color: var(--settings-content-title);
+        }
+      }
+    }
+  }
+
+  & select {
+    background-color: var(--settings-dropdown-bg);
+    color: var(--settings-dropdown-color);
+
+    &:focus {
+      border-color: var(--settings-dropdown-focus-border);
+    }
+
+    & option {
+      background-color: var(--settings-dropdown-bg);
+    }
+  }
+
+  & .checkbox-container {
+    background-color: var(--settings-checkbox-bg);
+    &.is-enabled {
+      background-color: var(--settings-checkbox-active-bg);
+    }
+  }
+}
+
+/*  File menu */
+.menu {
+  background-color: var(--settings-menu-bg);
+  border: var(--settings-content-border);
+
+  & .menu-item-title {
+    color: var(--settings-menu-color);
+  }
+
+  & .menu-item-icon path {
+    stroke: var(--icon-normal);
+  }
+
+  & .menu-separator {
+    border-bottom: var(--menu-separator);
+  }
+}
+
+/*! MOBILE */
+.mod-settings .modal-content {
+  & .vertical-tab-header {
+    background-color: var(--settings-menu-bg) !important;
+
+    & .vertical-tab-nav-item {
+      background-color: var(--settings-content-bg);
+    }
+  }
+
+  & .vertical-tab-content {
+    background-color: var(--settings-content-bg) !important;
+    & .setting-item {
+      background-color: var(--settings-content-bg);
+    }
+  }
+
+  & .modal-setting-back-button {
+    background-color: var(--settings-menu-bg);
+    color: var(--settings-menu-color);
+  }
+}

@@ -1,12 +1,16 @@
 /* Search input */
 .search-input-container {
   & input {
-    background-color: var(--gray-12);
-    color: var(--serenity-0);
+    background-color: var(--search-bar-bg);
+    color: var(--search-bar);
+
+    &:focus {
+      border-color: var(--search-bar-focus);
+    }
   }
 
   & .search-input-clear-button::before {
-    color: var(--serenity-0);
+    color: var(--search-bar);
   }
 }
 
@@ -15,29 +19,30 @@
     /* Hover/focus */
     &:hover,
     &:focus {
-      background-color: var(--explorer-hover);
+      background-color: var(--search-result-hover-bg);
       & .tree-item-inner,
       & .tree-item-self {
-        background-color: var(--explorer-hover);
-        color: var(--serenity-0);
+        background-color: var(--search-result-hover-bg);
+        color: var(--search-result-hover);
       }
 
+      /* Badge hover */
       & .tree-item-flair-outer {
         & .tree-item-flair {
-          color: var(--gray-12);
-          background-color: var(--cerulean-5);
+          color: var(--search-badge-hover);
+          background-color: var(--search-badge-bg-hover);
         }
       }
     }
 
     & .tree-item-inner {
-      color: var(--text-mute);
+      color: var(--text);
     }
     /* Badge */
     & .tree-item-flair-outer {
       & .tree-item-flair {
-        background-color: var(--purple-3);
-        color: var(--gray-12);
+        background-color: var(--search-badge-bg);
+        color: var(--search-badge);
       }
     }
 
@@ -46,9 +51,13 @@
       background-color: var(--sidebar-background);
 
       & .search-result-file-matched-text {
-        background-color: var(--purple-8);
-        color: var(--gray-0);
+        background-color: var(--search-match-bg);
+        color: var(--search-match);
       }
     }
+  }
+
+  & .search-result-file-matches {
+    border-bottom: var(--search-result-border);
   }
 }

@@ -1,0 +1,171 @@
+.markdown-preview-view,
+.is-live-preview {
+  font-size: var(--par);
+  font-family: var(--font-family);
+
+  /** HEADINGS  */
+  & h1,
+  & .HyperMD-header-1 .cm-header-1 {
+    color: var(--h1-color);
+    border-bottom: 1px solid var(--cerulean-5);
+  }
+
+  & h2,
+  & .HyperMD-header-2 .cm-header-2 {
+    color: var(--h2-color);
+    font-style: italic;
+    border-bottom: 1px solid var(--serenity-0);
+  }
+
+  & h3,
+  & .HyperMD-header-3 .cm-header-3 {
+    color: var(--h3-color);
+    font-weight: normal;
+  }
+
+  & h4,
+  & .HyperMD-header-4 .cm-header-4 {
+    color: var(--h4-color);
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  & h5,
+  & .HyperMD-header-5 .cm-header-5 {
+    color: var(--h5-color);
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  & h6,
+  & .HyperMD-header-6 .cm-header-6 {
+    color: var(--h6-color);
+    font-style: italic;
+  }
+
+  /** MISC TEXT  */
+  & p,
+  & span,
+  & div,
+  & ul,
+  & ol {
+    color: var(--text);
+  }
+
+  /** BOLD AND ITALICS */
+  & .cm-em,
+  & .cm-strong {
+    color: var(--cerulean-2);
+    &.cm-formatting {
+      color: var(--cerulean-3);
+    }
+  }
+
+  /** Highlight  */
+  & mark,
+  & .cm-line .cm-highlight {
+    background-color: var(--highlight);
+    color: var(--highlight-text);
+    margin: 0.2rem;
+    padding: 0.2rem;
+  }
+
+  /** Link  */
+  & a,
+  & .cm-hmd-internal-link > span {
+    color: var(--a-color);
+    text-decoration: underline;
+    text-decoration-color: var(--a-line-color);
+
+    &:hover {
+      color: var(--a-hover-color);
+      text-decoration-color: var(--a-line-hover-color) !important;
+    }
+  }
+
+  /** Tag  */
+  & span.cm-hashtag,
+  & a.tag {
+    color: var(--tag-color);
+    text-decoration-color: var(--tag-line-color);
+  }
+
+  /** Quote  */
+  & blockquote,
+  & div.HyperMD-quote {
+    border: solid 1px var(--quote-border-color) !important;
+    border-left-width: 5px !important;
+    padding: 1rem;
+    color: var(--quote-color) !important;
+    background-color: var(--editor-background) !important;
+    & span:nth-child(2) {
+      /* needed for live preview */
+      color: var(--quote-color);
+    }
+  }
+
+  /** Table  */
+  & table th {
+    color: var(--table-color);
+  }
+
+  /** HR  */
+  & hr {
+    border-color: var(--hr);
+  }
+
+  /** List  */
+  & .HyperMD-list-line {
+    & .cm-formatting {
+      color: var(--list-bullet); /* OL */
+      & > span {
+        color: var(--list-bullet); /* UL */
+      }
+    }
+  }
+
+  /** CODE BLOCK */
+  &.HyperMD-codeblock {
+    background-color: var(--code-bg);
+    color: var(--code-color);
+
+    &.HyperMD-codeblock-begin,
+    &.HyperMD-codeblock-end {
+      & .cm-formatting {
+        color: var(--code-color);
+      }
+    }
+  }
+
+  /** FRONTMATTER */
+  & .cm-hmd-frontmatter {
+    /* font-size: var(--small); */
+    color: var(--fm-value);
+
+    &.cm-atom,
+    &.cm-meta {
+      color: var(--fm-key);
+    }
+
+    &.cm-def {
+      color: var(--fm-fences);
+    }
+  }
+
+  & .cm-active {
+    background-color: var(--active-line);
+  }
+  & .CodeMirror-line,
+  & .cm-line {
+    max-width: 90vw !important;
+  }
+
+  /** Display container */
+  & .markdown-preview-section {
+    max-width: 1000px !important;
+  }
+
+  & .cm-content {
+    max-width: 90vw !important;
+  }
+}

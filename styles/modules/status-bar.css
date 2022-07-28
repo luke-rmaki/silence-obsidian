@@ -3,10 +3,10 @@
   background-color: var(--ribbon-background);
 
   & .status-bar-item {
-    color: var(--cerulean-2);
+    color: var(--status-bar-item);
 
     &.mod-clickable:hover {
-      color: var(--cerulean-5);
+      color: var(--status-bar-item-hover);
     }
   }
 }

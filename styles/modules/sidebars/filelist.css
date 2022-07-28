@@ -7,35 +7,36 @@
 
   /*  File names */
   & .nav-file .nav-file-title {
-    color: var(--text-mute);
+    color: var(--text);
     font-style: italic;
   }
 
   /* Hover/focus */
-  & .nav-folder-title:hover,
-  & .nav-folder-title:focus {
-    background-color: var(--explorer-hover) !important;
+  & .nav-folder .nav-folder-title:hover,
+  & .nav-folder .nav-folder-title:focus {
+    background-color: var(--explorer-hover-bg);
     & .nav-folder-title-content {
-      background-color: var(--explorer-hover);
-      color: var(--cerulean-0) !important;
+      background-color: var(--explorer-hover-bg);
+      color: var(--explorer-hover);
     }
   }
   & .nav-file:hover,
   & .nav-file:focus {
     & .nav-file-title {
-      color: var(--serenity-0);
-      background-color: var(--explorer-hover);
+      color: var(--explorer-hover);
+      background-color: var(--explorer-hover-bg);
     }
   }
 
   /* Active file */
-  & .is-active {
+  & div.is-active.nav-file-title {
     background-color: var(--explorer-active-bg);
-    color: var(--gray-12) !important;
+    color: var(--explorer-active);
 
     &:hover,
     &:focus {
-      background-color: var(--explorer-active-bg) !important;
+      background-color: var(--explorer-active-bg);
+      color: var(--explorer-active);
     }
   }
 }

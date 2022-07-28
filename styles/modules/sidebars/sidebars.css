@@ -2,27 +2,20 @@
 @import "./icons.css";
 @import "./filelist.css";
 @import "./search.css";
-
-:root {
-  --tab-background: var(--gray-11);
-  --explorer-active-bg: var(--serenity-3);
-  --explorer-active: var(--gray-12);
-  --explorer-hover: var(--gray-8);
-  --search-bar: var(--gray-5);
-  --search-hover: var(--purple-5);
-}
+@import "./mobile.css";
 
 .workspace-split.mod-left-split,
 .workspace-split.mod-right-split {
   /* Main sidebar (on top of workspace-tabs) */
   & .workspace-leaf {
     background-color: var(--sidebar-background);
+    border: none;
   }
 
   & .tree-item-self {
     &:hover,
     &:focus {
-      background-color: var(--explorer-hover);
+      background-color: var(--explorer-hover-bg);
     }
   }
 }
@@ -39,17 +32,29 @@
 
   &:hover,
   &:focus {
-    background-color: var(--explorer-hover);
+    background-color: var(--explorer-hover-bg);
 
-    & * {
-      background-color: var(--explorer-hover) !important;
+    & *,
+    & .nav-file-title {
+      background-color: var(--explorer-hover-bg);
     }
 
     & .nav-file-icon {
       color: var(--icon-hover);
     }
     & .nav-file-title-content {
-      color: var(--gray-0);
+      color: var(--explorer-hover);
     }
+  }
+}
+
+.tag-container {
+  & .tag-pane-tag-self {
+    color: var(--tag-pane-text);
+  }
+
+  & .tree-item-flair {
+    background-color: var(--tag-pane-badge);
+    color: var(--tag-pane-badge-text);
   }
 }

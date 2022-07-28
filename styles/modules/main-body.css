@@ -1,134 +1,135 @@
-:root {
-  --editor-icons: var(--serenity-3);
-  --editor-title: var(--cerulean-3);
-  --line-number: var(--gray-2);
-  --current-line-bg: var(--gray-11);
-  --cursor: var(--serenity-2);
+.tooltip {
+  background: var(--tooltip-background);
+  color: var(--tooltip-color);
 }
-.mod-root {
-  /* Workspace leaf is each editor: mod-active class is applied to the active editor */
-  & .workspace-leaf {
-    /* Workspace leaf content has a data attribute for empty if there is no file */
-    & .workspace-leaf-content {
-      /* ----------------------------------- Editor header */
-      & .view-header {
-        /* Important used to avoid crazy nesting */
-        background-color: var(--gray-11) !important;
-        border: none;
 
-        & .view-header-title-container::after {
-          background: var(--gray-11) !important;
+.workspace-leaf-resize-handle {
+  background-color: var(--resize-handle);
+  width: 2px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--resize-handle-hover);
+  }
+}
+
+.mod-root .workspace-leaf .workspace-leaf-content {
+  /* ----------------------------------- Editor header */
+  & .view-header {
+    /* Important used to avoid crazy nesting */
+    background-color: var(--editor-title-bg) !important;
+    border: none;
+
+    & .view-header-title-container::after {
+      background: var(--editor-title-bg) !important;
+    }
+
+    /* File icon */
+    & .view-header-icon {
+      color: var(--icon-normal);
+      &:hover {
+        color: var(--icon-hover);
+      }
+    }
+
+    & .view-header-title {
+      color: var(--editor-title);
+    }
+
+    /* Action icons */
+    & .view-action {
+      color: var(--icon-normal);
+      &:hover {
+        color: var(--icon-hover);
+      }
+    }
+  }
+
+  /* ------------------------------------ Content */
+  & .view-content {
+    background-color: var(--editor-background);
+
+    /* Empty window content */
+    & .empty-state-container {
+      color: var(--text-mute);
+
+      & .empty-state-action {
+        color: var(--text-mute);
+
+        &:hover {
+          color: var(--icon-hover);
         }
+      }
+    }
 
-        /* File icon */
-        & .view-header-icon {
-          color: var(--editor-icons);
-          &:hover {
-            color: var(--icon-hover);
-          }
-        }
+    /* -------------------------------- Editor styles */
+    & .markdown-source-view {
+      font-size: var(--par);
 
-        & .view-header-title {
-          color: var(--editor-title);
-        }
+      & .CodeMirror-cursors {
+        z-index: 100;
+      }
 
-        /* Action icons */
-        & .view-action {
-          color: var(--editor-icons);
-          &:hover {
-            color: var(--icon-hover);
-          }
+      /* Cursor insert mode */
+      & .CodeMirror-cursor,
+      & .cm-cursor {
+        border-left: 1px solid var(--cursor);
+      }
+
+      & .CodeMirror,
+      & .cm-contentContainer {
+        max-width: 70vw;
+      }
+
+      /* Cursor normal */
+      & .cm-fat-cursor {
+        & .CodeMirror-cursor {
+          background: var(--cursor);
+          z-index: 100;
         }
       }
 
-      /* ------------------------------------ Content */
-      & .view-content {
+      /*  live preview */
+      & .cm-cursorLayer {
+        & .cm-fat-cursor {
+          background: var(--cursor);
+        }
+      }
+
+      /* Gutters Desktop */
+      & .CodeMirror-gutters .CodeMirror-gutter {
         background-color: var(--editor-background);
+      }
+      & .CodeMirror-linenumber {
+        color: var(--line-number);
+        font-size: var(--par);
+      }
 
-        /* Empty window content */
-        & .empty-state-container {
-          color: var(--text-mute);
-
-          & .empty-state-action {
-            color: var(--text-mute);
-
-            &:hover {
-              color: var(--icon-hover);
-            }
-          }
+      /* Gutters Mobile */
+      & .cm-gutters {
+        background-color: var(--editor-background) !important;
+        & .cm-foldGutter {
+          background: var(--editor-background);
         }
 
-        /* -------------------------------- Editor styles */
-        & .markdown-source-view {
-          font-size: var(--par);
+        & .cm-lineNumbers {
+          background: var(--editor-background);
 
-          & .CodeMirror-cursors {
-            z-index: 100;
-          }
-
-          /* Cursor insert mode */
-          & .CodeMirror-cursor,
-          & .cm-cursor {
-            border-left: 1px solid var(--cursor);
-          }
-
-          & .CodeMirror,
-          & .cm-contentContainer {
-            max-width: 70vw;
-          }
-
-          /* Cursor normal */
-          & .cm-fat-cursor {
-            & .CodeMirror-cursor {
-              background: var(--cursor);
-              z-index: 100;
-            }
-          }
-
-          /*  live preview */
-          & .cm-cursorLayer {
-            & .cm-fat-cursor {
-              background: var(--cursor);
-            }
-          }
-
-          /* Gutters Desktop */
-          & .CodeMirror-gutters .CodeMirror-gutter {
-            background-color: var(--editor-background);
-          }
-          & .CodeMirror-linenumber {
+          & .cm-gutterElement {
             color: var(--line-number);
-            font-size: var(--par);
           }
-
-          /* Gutters Mobile */
-          & .cm-gutters {
-            background-color: var(--editor-background) !important;
-            & .cm-foldGutter {
-              background: var(--editor-background);
-              span[title="Unfold line"] {
-                /* color: var(--purple);  doesn't work */
-              }
-            }
-
-            & .cm-lineNumbers {
-              background: var(--editor-background);
-
-              & .cm-gutterElement {
-                color: var(--line-number);
-              }
-            }
-            /* ------ Active line styles */
-            & div.cm-active {
-              color: var(--yellow-2) !important;
-              background-color: var(--gray-10);
-            }
-          }
-
-          /* Content styles */
-          /* See _text-styles.scss */
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .workspace .view-content .cm-editor .cm-scroller {
+    padding: 15px;
+
+    & div.cm-contentContainer {
+      max-width: 100vw !important;
     }
   }
 }
