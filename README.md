@@ -12,8 +12,8 @@ Twitter: [luke-rmaki](https://twitter.com/luke_rmaki)
 <br />
 
 
-![screenshot of the theme](Screenshot1.png)
-![screenshot of the theme](Screenshot2.png)
+![screenshot of the theme](Screenshot.png)
+
 
 ---
 <br />
