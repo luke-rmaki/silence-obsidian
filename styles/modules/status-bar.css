@@ -1,6 +1,6 @@
 .status-bar {
   border-top: none;
-  background-color: var(--ribbon-background);
+  background-color: var(--ribbon-background-theme);
 
   & .status-bar-item {
     color: var(--status-bar-item);

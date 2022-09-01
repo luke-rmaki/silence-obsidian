@@ -1,5 +1,5 @@
 .side-dock-ribbon {
-  background-color: var(--ribbon-background) !important;
+  background-color: var(--ribbon-background-theme) !important;
   /* Ribbon buttons */
   & .side-dock-ribbon-action {
     color: var(--icon-normal);

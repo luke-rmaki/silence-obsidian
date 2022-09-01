@@ -6,40 +6,40 @@
   /** HEADINGS  */
   & h1,
   & .HyperMD-header-1 .cm-header-1 {
-    color: var(--h1-color);
+    color: var(--h1-color-theme);
     border-bottom: 1px solid var(--cerulean-5);
   }
 
   & h2,
   & .HyperMD-header-2 .cm-header-2 {
-    color: var(--h2-color);
+    color: var(--h2-color-theme);
     font-style: italic;
     border-bottom: 1px solid var(--serenity-0);
   }
 
   & h3,
   & .HyperMD-header-3 .cm-header-3 {
-    color: var(--h3-color);
+    color: var(--h3-color-theme);
     font-weight: normal;
   }
 
   & h4,
   & .HyperMD-header-4 .cm-header-4 {
-    color: var(--h4-color);
+    color: var(--h4-color-theme);
     font-weight: normal;
     font-style: italic;
   }
 
   & h5,
   & .HyperMD-header-5 .cm-header-5 {
-    color: var(--h5-color);
+    color: var(--h5-color-theme);
     font-weight: normal;
     font-style: italic;
   }
 
   & h6,
   & .HyperMD-header-6 .cm-header-6 {
-    color: var(--h6-color);
+    color: var(--h6-color-theme);
     font-style: italic;
   }
 
@@ -86,7 +86,7 @@
   /** Tag  */
   & span.cm-hashtag,
   & a.tag {
-    color: var(--tag-color);
+    color: var(--tag-color-theme);
     text-decoration-color: var(--tag-line-color);
   }
 

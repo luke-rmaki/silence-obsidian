@@ -65,34 +65,41 @@
     /* -------------------------------- Editor styles */
     & .markdown-source-view {
       font-size: var(--par);
+      max-width: 70vw !important;
 
-      & .CodeMirror-cursors {
+      & .cm-scroller {
+        width: 100vw;
+      }
+
+      & .cm-sizer {
+        max-width: 70vw !important;
+      }
+
+      & .cm-cursorLayer {
         z-index: 100;
+        /* Cursor normal */
+        & .cm-fat-cursor {
+          & .CodeMirror-cursor {
+            background: var(--cursor-theme) !important;
+            z-index: 100;
+          }
+        }
       }
 
       /* Cursor insert mode */
       & .CodeMirror-cursor,
       & .cm-cursor {
-        border-left: 1px solid var(--cursor);
+        border-left: 1px solid var(--cursor-theme);
       }
 
       & .CodeMirror,
       & .cm-contentContainer {
-        max-width: 70vw;
-      }
-
-      /* Cursor normal */
-      & .cm-fat-cursor {
-        & .CodeMirror-cursor {
-          background: var(--cursor);
-          z-index: 100;
-        }
       }
 
       /*  live preview */
       & .cm-cursorLayer {
         & .cm-fat-cursor {
-          background: var(--cursor);
+          background: var(--cursor-theme);
         }
       }
 

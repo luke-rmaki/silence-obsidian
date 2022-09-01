@@ -10,7 +10,7 @@
 ╚═════╝░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝░╚════╝░╚══════╝░░░░░░░╚════╝░╚═════╝░╚═════╝░╚═╝╚═════╝░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
 
 Made by: Luke Ruokaismaki
-Version: 0.1.0
+Version: 1.0.0
 Repo: https://github.com/luke-rmaki/silence-obsidian
 Built with PostCSS and Gulp
 
@@ -121,8 +121,8 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   --popup-dark: var(--gray-10);
   --titlebar-text: var(--cerulean-3);
   --titlebar-btn: var(--serenity-0);
-  --ribbon-background: var(--gray-11);
-  --scrollbar-bg: var(--cerulean-5);
+  --ribbon-background-theme: var(--gray-11);
+  --scrollbar-bg-theme: var(--cerulean-5);
   --status-bar-item: var(--cerulean-2);
   --status-bar-item-hover: var(--cerulean-5);
   --tooltip-background: var(--gray-12);
@@ -170,9 +170,11 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   --editor-title: var(--cerulean-3);
   --editor-title-bg: var(--gray-11);
   --active-line: var(--gray-9);
-  --cursor: var(--serenity-2);
+  --cursor-theme: var(--serenity-2);
   --line-number: var(--gray-2);
   --active-line-number: var(--yellow-2);
+  --tab-container-bg: var(--gray-11);
+  --tab-text: var(--serenity-0);
 
   /*! TEXT COLORS */
   /** Main text */
@@ -180,12 +182,12 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   --text-mute: var(--gray-0);
 
   /** Headings */
-  --h1-color: var(--cerulean-3);
-  --h2-color: var(--serenity-0);
-  --h3-color: var(--green-1);
-  --h4-color: var(--cerulean-2);
-  --h5-color: var(--cerulean-3);
-  --h6-color: var(--yellow-5);
+  --h1-color-theme: var(--cerulean-3);
+  --h2-color-theme: var(--serenity-0);
+  --h3-color-theme: var(--green-1);
+  --h4-color-theme: var(--cerulean-2);
+  --h5-color-theme: var(--cerulean-3);
+  --h6-color-theme: var(--yellow-5);
 
   /** Highlight */
   --highlight: var(--yellow-5);
@@ -198,7 +200,7 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   --a-line-hover-color: var(--green-5);
 
   /** Tags */
-  --tag-color: var(--green-3);
+  --tag-color-theme: var(--green-3);
   --tag-line-color: var(--green-3);
 
   /** Block quote */
@@ -207,7 +209,7 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
 
   /** Table */
   --table-color: var(--cerulean-3);
-  --table-border-color: var(--cerulean-5);
+  --table-border-color-theme: var(--cerulean-5);
 
   /** Table */
   --list-bullet: var(--cerulean-3);
@@ -251,7 +253,7 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
 }
 .titlebar {
   background-color: #131821;
-  background-color: var(--ribbon-background);
+  background-color: var(--ribbon-background-theme);
   border: none
 }
 .titlebar .titlebar-text {
@@ -262,6 +264,20 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
     color: #c8fafd;
     color: var(--titlebar-btn);
   }
+.workspace .workspace-tabs .workspace-tab-header-container {
+  background-color: #131821;
+  background-color: var(--tab-container-bg)
+}
+.workspace .workspace-tabs .workspace-tab-header-container .workspace-tab-header {
+    color: #c8fafd;
+    color: var(--tab-text)
+  }
+.workspace .workspace-tabs .workspace-tab-header-container .workspace-tab-header ::before {
+      box-shadow: inset 0 0 0 var(--tab-outline-width) #0c1018,
+        0 0 0 calc(var(--tab-curve) * 4) var(--background-primary);
+      box-shadow: inset 0 0 0 var(--tab-outline-width) var(--sidebar-background),
+        0 0 0 calc(var(--tab-curve) * 4) var(--background-primary);
+    }
 .workspace-tabs .workspace-tab-header-container {
   /* tab icon bar background */
   background-color: #131821;
@@ -592,7 +608,7 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   }
 .side-dock-ribbon {
   background-color: #131821 !important;
-  background-color: var(--ribbon-background) !important
+  background-color: var(--ribbon-background-theme) !important
   /* Ribbon buttons */
 }
 .side-dock-ribbon .side-dock-ribbon-action {
@@ -710,11 +726,24 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   }
 .mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view {
       font-size: 0.9rem;
-      font-size: var(--par)
+      font-size: var(--par);
+      max-width: 70vw !important
     }
-.mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view .CodeMirror-cursors {
-        z-index: 100;
+.mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view .cm-scroller {
+        width: 100vw;
       }
+.mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view .cm-sizer {
+        max-width: 70vw !important;
+      }
+.mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view .cm-cursorLayer {
+        z-index: 100
+        /* Cursor normal */
+      }
+.mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view .cm-cursorLayer .cm-fat-cursor .CodeMirror-cursor {
+            background: #92e1e4 !important;
+            background: var(--cursor-theme) !important;
+            z-index: 100;
+          }
 .mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view {
 
       /* Cursor insert mode */
@@ -722,28 +751,18 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
 .mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view .CodeMirror-cursor,
       .mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view .cm-cursor {
         border-left: 1px solid #92e1e4;
-        border-left: 1px solid var(--cursor);
+        border-left: 1px solid var(--cursor-theme);
       }
 .mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view .CodeMirror,
       .mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view .cm-contentContainer {
-        max-width: 70vw;
       }
-.mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view {
-
-      /* Cursor normal */
-    }
-.mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view .cm-fat-cursor .CodeMirror-cursor {
-          background: #92e1e4;
-          background: var(--cursor);
-          z-index: 100;
-        }
 .mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view {
 
       /*  live preview */
     }
 .mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view .cm-cursorLayer .cm-fat-cursor {
           background: #92e1e4;
-          background: var(--cursor);
+          background: var(--cursor-theme);
         }
 .mod-root .workspace-leaf .workspace-leaf-content .view-content .markdown-source-view {
 
@@ -801,7 +820,7 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   .is-live-preview h1,
   .is-live-preview .HyperMD-header-1 .cm-header-1 {
     color: #7aa4ff;
-    color: var(--h1-color);
+    color: var(--h1-color-theme);
     border-bottom: 1px solid #0072e4;
     border-bottom: 1px solid var(--cerulean-5);
   }
@@ -810,7 +829,7 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   .is-live-preview h2,
   .is-live-preview .HyperMD-header-2 .cm-header-2 {
     color: #c8fafd;
-    color: var(--h2-color);
+    color: var(--h2-color-theme);
     font-style: italic;
     border-bottom: 1px solid #c8fafd;
     border-bottom: 1px solid var(--serenity-0);
@@ -820,7 +839,7 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   .is-live-preview h3,
   .is-live-preview .HyperMD-header-3 .cm-header-3 {
     color: #90f8c0;
-    color: var(--h3-color);
+    color: var(--h3-color-theme);
     font-weight: normal;
   }
 .markdown-preview-view h4,
@@ -828,7 +847,7 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   .is-live-preview h4,
   .is-live-preview .HyperMD-header-4 .cm-header-4 {
     color: #b1c5ff;
-    color: var(--h4-color);
+    color: var(--h4-color-theme);
     font-weight: normal;
     font-style: italic;
   }
@@ -837,7 +856,7 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   .is-live-preview h5,
   .is-live-preview .HyperMD-header-5 .cm-header-5 {
     color: #7aa4ff;
-    color: var(--h5-color);
+    color: var(--h5-color-theme);
     font-weight: normal;
     font-style: italic;
   }
@@ -846,7 +865,7 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   .is-live-preview h6,
   .is-live-preview .HyperMD-header-6 .cm-header-6 {
     color: #ffd34b;
-    color: var(--h6-color);
+    color: var(--h6-color-theme);
     font-style: italic;
   }
 .markdown-preview-view,
@@ -934,7 +953,7 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
   .is-live-preview span.cm-hashtag,
   .is-live-preview a.tag {
     color: #60cc95;
-    color: var(--tag-color);
+    color: var(--tag-color-theme);
     -webkit-text-decoration-color: #60cc95;
             text-decoration-color: #60cc95;
     -webkit-text-decoration-color: var(--tag-line-color);
@@ -1054,7 +1073,7 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
 .status-bar {
   border-top: none;
   background-color: #131821;
-  background-color: var(--ribbon-background)
+  background-color: var(--ribbon-background-theme)
 }
 .status-bar .status-bar-item {
     color: #b1c5ff;

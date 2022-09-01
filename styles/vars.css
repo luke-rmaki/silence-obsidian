@@ -7,8 +7,8 @@
   --popup-dark: var(--gray-10);
   --titlebar-text: var(--cerulean-3);
   --titlebar-btn: var(--serenity-0);
-  --ribbon-background: var(--gray-11);
-  --scrollbar-bg: var(--cerulean-5);
+  --ribbon-background-theme: var(--gray-11);
+  --scrollbar-bg-theme: var(--cerulean-5);
   --status-bar-item: var(--cerulean-2);
   --status-bar-item-hover: var(--cerulean-5);
   --tooltip-background: var(--gray-12);
@@ -56,9 +56,11 @@
   --editor-title: var(--cerulean-3);
   --editor-title-bg: var(--gray-11);
   --active-line: var(--gray-9);
-  --cursor: var(--serenity-2);
+  --cursor-theme: var(--serenity-2);
   --line-number: var(--gray-2);
   --active-line-number: var(--yellow-2);
+  --tab-container-bg: var(--gray-11);
+  --tab-text: var(--serenity-0);
 
   /*! TEXT COLORS */
   /** Main text */
@@ -66,12 +68,12 @@
   --text-mute: var(--gray-0);
 
   /** Headings */
-  --h1-color: var(--cerulean-3);
-  --h2-color: var(--serenity-0);
-  --h3-color: var(--green-1);
-  --h4-color: var(--cerulean-2);
-  --h5-color: var(--cerulean-3);
-  --h6-color: var(--yellow-5);
+  --h1-color-theme: var(--cerulean-3);
+  --h2-color-theme: var(--serenity-0);
+  --h3-color-theme: var(--green-1);
+  --h4-color-theme: var(--cerulean-2);
+  --h5-color-theme: var(--cerulean-3);
+  --h6-color-theme: var(--yellow-5);
 
   /** Highlight */
   --highlight: var(--yellow-5);
@@ -84,7 +86,7 @@
   --a-line-hover-color: var(--green-5);
 
   /** Tags */
-  --tag-color: var(--green-3);
+  --tag-color-theme: var(--green-3);
   --tag-line-color: var(--green-3);
 
   /** Block quote */
@@ -93,7 +95,7 @@
 
   /** Table */
   --table-color: var(--cerulean-3);
-  --table-border-color: var(--cerulean-5);
+  --table-border-color-theme: var(--cerulean-5);
 
   /** Table */
   --list-bullet: var(--cerulean-3);
