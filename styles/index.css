@@ -8,7 +8,7 @@
 ╚═════╝░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝░╚════╝░╚══════╝░░░░░░░╚════╝░╚═════╝░╚═════╝░╚═╝╚═════╝░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
 
 Made by: Luke Ruokaismaki
-Version: 1.0.0
+Version: 2.0.0
 Repo: https://github.com/luke-rmaki/silence-obsidian
 Built with PostCSS and Gulp
 
@@ -20,14 +20,3 @@ To edit colors, use the vars.css file or edit the variables below if not buildin
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 @import "./colors.css";
 @import "./vars.css";
-@import "./modules/titlebar.css";
-@import "./modules//sidebars/sidebars.css";
-@import "./modules/ribbons.css";
-@import "./modules/main-body.css";
-@import "./modules/text.css";
-@import "./modules/status-bar.css";
-@import "./modules/menu.css";
-
-body {
-  font-family: var(--font) !important;
-}

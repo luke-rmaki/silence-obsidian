@@ -1,6 +1,6 @@
 # SILENCE
 
-> Dark theme for [Obsidian](https://obsidian.md/) desktop and mobile
+> Dark theme for [Obsidian](https://obsidian.md/) desktop (v0.16.0) 
 
 
 Uses [Fira Code](https://fonts.google.com/specimen/Fira+Code).
@@ -18,19 +18,9 @@ Twitter: [luke-rmaki](https://twitter.com/luke_rmaki)
 ---
 <br />
 
-
-This can also serve a base to make your own theme as everything is styled via css variables in the vars.css file, so feel free to fork it and make it your own (just rename it 😀).
-
-<br />
-
-
-
-
----
-<br />
-
 ## To Do
 - [ ] Add to community themes
+- [ ] Style tables
 
 
 

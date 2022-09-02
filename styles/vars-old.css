@@ -1,0 +1,139 @@
+:root {
+  /*! BODY COLORS */
+  --border: 0.5px solid var(--cerulean-5);
+  --icon-normal: var(--serenity-3);
+  --icon-hover: var(--cerulean-5);
+  --icon-accent: var(--cerulean-5);
+  --popup-dark: var(--gray-10);
+  --titlebar-text: var(--cerulean-3);
+  --titlebar-btn: var(--serenity-0);
+  --ribbon-background-theme: var(--gray-11);
+  --scrollbar-bg-theme: var(--cerulean-5);
+  --status-bar-item: var(--cerulean-2);
+  --status-bar-item-hover: var(--cerulean-5);
+  --tooltip-background: var(--gray-12);
+  --tooltip-color: var(--serenity-0);
+  --resize-handle: var(--gray-10);
+  --resize-handle-hover: var(--green-1);
+
+  /*! SIDEBAR COLORS */
+  --sidebar-background: var(--gray-12);
+  --tab-background: var(--gray-11);
+  --explorer-active-bg: var(--serenity-2);
+  --explorer-active: var(--gray-12);
+  --explorer-hover-bg: var(--gray-10);
+  --explorer-hover: var(--cerulean-0);
+  --search-bar-bg: var(--gray-11);
+  --search-bar: var(--serenity-0);
+  --search-bar-focus: var(--cerulean-5);
+  --search-result-hover-bg: var(--gray-9);
+  --search-result-hover: var(--serenity-0);
+  --search-result: var(--serenity-0);
+  --search-result-border: 1px solid var(--purple-5);
+  --search-badge: var(--gray-12);
+  --search-badge-bg: var(--cerulean-5);
+  --search-badge-hover: var(--gray-12);
+  --search-badge-bg-hover: var(--purple-3);
+  --search-match: var(--gray-12);
+  --search-match-bg: var(--yellow-5);
+  --settings-icon: var(--yellow-3);
+  --settings-icon-hover: var(--purple-3);
+  --tag-pane-text: var(--serenity-0);
+  --tag-pane-badge: var(--cerulean-5);
+  --tag-pane-badge-text: var(--gray-12);
+
+  /** Mobile */
+  --sidebar-header: var(--serenity-0);
+  --sidebar-info: var(--gray-0);
+  --pin: var(--purple-4);
+  --back-icon: var(--yellow-5);
+  --drawer-icon-active: var(--cerulean-5);
+  --drawer-title: var(--cerulean-3);
+  --fullscreen-icon: var(--yellow-5);
+
+  /*! EDITOR COLORS */
+  --editor-background: var(--gray-10);
+  --editor-title: var(--cerulean-3);
+  --editor-title-bg: var(--gray-11);
+  --active-line: var(--gray-9);
+  --cursor-theme: var(--serenity-2);
+  --line-number: var(--gray-2);
+  --active-line-number: var(--yellow-2);
+  --tab-container-bg: var(--gray-11);
+  --tab-text: var(--serenity-0);
+
+  /*! TEXT COLORS */
+  /** Main text */
+  --text: var(--serenity-0);
+  --text-mute: var(--gray-0);
+
+  /** Headings */
+  --h1-color-theme: var(--cerulean-3);
+  --h2-color-theme: var(--serenity-0);
+  --h3-color-theme: var(--green-1);
+  --h4-color-theme: var(--cerulean-2);
+  --h5-color-theme: var(--cerulean-3);
+  --h6-color-theme: var(--yellow-5);
+
+  /** Highlight */
+  --highlight: var(--yellow-5);
+  --highlight-text: var(--gray-12);
+
+  /** Links */
+  --a-color: var(--yellow-5);
+  --a-line-color: var(--yellow-8);
+  --a-hover-color: var(--green-1);
+  --a-line-hover-color: var(--green-5);
+
+  /** Tags */
+  --tag-color-theme: var(--green-3);
+  --tag-line-color: var(--green-3);
+
+  /** Block quote */
+  --quote-color: var(--text);
+  --quote-border-color: var(--yellow-5);
+
+  /** Table */
+  --table-color: var(--cerulean-3);
+  --table-border-color-theme: var(--cerulean-5);
+
+  /** Table */
+  --list-bullet: var(--cerulean-3);
+
+  /** HR */
+  --hr: var(--cerulean-5);
+
+  /** Codeblock */
+  --code-bg: var(--gray-12);
+  --code-color: var(--serenity-0);
+
+  /** Front Matter */
+  --fm-value: var(--purple-3);
+  --fm-key: var(--serenity-0);
+  --fm-fences: var(--cerulean-5);
+
+  /*! SETTINGS */
+  --settings-menu-bg: var(--gray-12);
+  --settings-menu-title: var(--gray-0);
+  --settings-menu-color: var(--serenity-0);
+  --settings-menu-active-color: var(--yellow-5);
+  --settings-menu-active-border: var(--cerulean-5);
+  --settings-content-bg: var(--gray-11);
+  --settings-content-border: 1px solid var(--gray-5);
+  --settings-content-title: var(--cerulean-3);
+  --settings-content-name: var(--serenity-0);
+  --settings-content-description: var(--gray-0);
+  --settings-dropdown-bg: var(--gray-12);
+  --settings-dropdown-color: var(--serenity-0);
+  --settings-dropdown-focus-border: var(--cerulean-5);
+  --settings-checkbox-active-bg: var(--cerulean-5);
+  --settings-checkbox-bg: var(--gray-12);
+  --menu-separator: solid 1px var(--purple-5);
+
+  /*! FONT */
+  --font: "Fira Code", monospace;
+
+  /** Size */
+  --par: 0.9rem;
+  --small: 0.7rem;
+}

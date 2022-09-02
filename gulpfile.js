@@ -13,7 +13,7 @@ function processCSS() {
     'nesting-rules': true
   }})]))
     .on('end', () => log('PostCSS processing finished'))
-    .pipe(concat("obsidian.css"))
+    .pipe(concat("theme.css"))
     .on('end', () => log('Output concatenated'))
     .pipe(dest("./"))
     .pipe(rename("./Silence-Obsidian.css"))
