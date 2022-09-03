@@ -19,26 +19,26 @@ Twitter: [luke-rmaki](https://twitter.com/luke_rmaki)
 <br />
 
 ## To Do
-- [ ] Add to community themes
 - [ ] Style tables
+- [ ] Style graph
 
 
 
 ## How to install
-<!-- ### Option 1 (Add from Obsidian)
+### Option 1 (Add from Obsidian)
 - This theme is now listed in Obsidian's community themes
 - Open Obsidian -> Settings -> Appearance 
-- Browser Community themes and search for Rmaki -->
+- Browser Community themes and search for Rmaki
 
 
-### Option 1 (Download):
+### Option 2 (Download):
 
 1. Download the `Silence-Obsidian.css` file
 2. Copy into your themes folder
 3. Open Settings -> Appearances
 4. Change Theme to 'Silence-Obsidian'
 
-### Option 2 (Build):
+### Option 3 (Build):
 
 1. Clone the repo
 2. Navigate to folder
