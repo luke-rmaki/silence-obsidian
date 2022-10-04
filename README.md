@@ -71,3 +71,6 @@ or
 ```bash
 pnpm run build
 ```
+
+## Also available for
+- [VSCode](https://github.com/luke-rmaki/silence-vscode)
