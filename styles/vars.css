@@ -23,6 +23,7 @@ body {
   --icon-color-hover: var(--cerulean-5);
 
   /*! TEXT COLORS */
+  --inline-title-color: var(--green-1);
   --h1-color: var(--serenity-1);
   --h2-color: var(--cerulean-5);
   --h3-color: var(--green-1);
