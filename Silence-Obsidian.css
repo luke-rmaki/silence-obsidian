@@ -10,7 +10,7 @@
 ╚═════╝░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝░╚════╝░╚══════╝░░░░░░░╚════╝░╚═════╝░╚═════╝░╚═╝╚═════╝░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
 
 Made by: Luke Ruokaismaki
-Version: 1.4.0
+Version: 2.2.0
 Repo: https://github.com/luke-rmaki/silence-obsidian
 Built with PostCSS and Gulp
 
@@ -195,4 +195,8 @@ body {
 }
 .nav-folder-title-content {
   font-weight: bold;
+}
+.markdown-rendered mark {
+  color: #0c1018;
+  color: var(--gray-12);
 }

@@ -84,3 +84,7 @@ body {
 .nav-folder-title-content {
   font-weight: bold;
 }
+
+.markdown-rendered mark {
+  color: var(--gray-12);
+}
