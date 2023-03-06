@@ -74,3 +74,4 @@ pnpm run build
 
 ## Also available for
 - [VSCode](https://github.com/luke-rmaki/silence-vscode)
+- [Firefox](https://github.com/luke-rmaki/silence-firefox)
