@@ -1,9 +1,9 @@
 body {
   /*! EDITOR */
   --file-line-width: 70vw;
-  --background-primary: var(--gray-10);
+  --background-primary: var(--gray-12);
   --background-secondary: var(--gray-11);
-  --background-secondary-alt: var(--gray-12);
+  --background-secondary-alt: var(--gray-10);
   --divider-color: var(--gray-8);
 
   /** Ribbon */
